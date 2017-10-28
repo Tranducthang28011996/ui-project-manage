@@ -49,7 +49,7 @@ body {
 }
 
 .stylish-input-group .form-control{
-  box-shadow:0 0 0; 
+  box-shadow:0 0 0;
   border: 0;
   background-color: rgba(255,255,255,.3);
 }
@@ -72,7 +72,7 @@ body {
   border-radius: 50%;
   border: 2px solid white;
   margin-top: -3px;
-  width: 36px;
+  width: 20px;
 }
 
 #nav-menu {
@@ -198,4 +198,74 @@ body {
   border-radius: 4px;
   background: none;
   margin-bottom: 10px;
+}
+
+/****************************************/
+
+.div-menu-tooltip {
+  margin: 32px 0px 0px -101px;
+  padding: 0;
+  width: 250px;
+  color: gray;
+  border: 0;
+}
+
+.div-menu-tooltip input {
+  background-color: #e2e4e6;
+  width: 235px;
+  margin: auto;
+}
+
+.div-menu-tooltip input {
+  background-color: #e2e4e6;
+  width: 235px;
+  margin: auto;
+}
+
+.div-menu-tooltip a {
+  border-radius: 5px;
+  color: gray;
+  margin-top:4px;
+  margin: auto;
+  padding: 4px 1.25rem;
+  text-decoration: none;
+  width: 235px;
+}
+
+.div-menu-tooltip a:hover {
+  background-color: #e2e4e6;
+}
+
+.popup-menu-right {
+  margin: 37px 692px;
+  width: 300px;
+}
+
+.title-popup {
+  border-bottom: 1px solid gray;
+  color: gray;
+  text-align: center;
+}
+/***************************************/
+.avatar-profile {
+  width: 95px;
+  border-radius: 50%;
+}
+
+.profile-infor {
+  line-height: 45px;
+}
+
+.profile-infor {
+  margin-top: 27px;
+}
+
+.input-profile {
+  margin-top: -15px;
+  margin-bottom: 0px;
+}
+
+.close-popup {
+  margin-right: 10px;
+  cursor: pointer;
 }

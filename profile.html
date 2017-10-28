@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script type="text/javascript" src="assets/js/jquery.sortable.js"></script>
+  <script>
+    $(function() {
+      $('.connected').sortable({
+        connectWith: '.connected'
+      });
+      $('.connected').on('drop', function(ev){
+        console.log($(this).attr('id'));
+      });
+
+      // $('.connected').on('dragenter', function(ev){
+      //   console.log($(this).attr('id'));
+      // });
+
+      $('.task-item').on('dragstart', function(ev){
+        console.log($(this).attr('id'));
+      });
+    });
+  </script>
+</head>
+<body>
+  <div id="header">
+    <i class="dropdown">
+      <button class="btn btn-sm btn-project pull-left dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-braille" aria-hidden="true"></i> Project
+      </button>
+      <i class="dropdown-menu div-menu-tooltip">
+        <div class="list-group">
+          <form class="navbar-form">
+              <input type="text" class="form-control" placeholder="Find borad by name" autofocus>
+          </form>
+          <a href="#">Recent Board</a>
+          <a href="#">Personal Board</a>
+          <a href="#">Create new board</a>
+          <a href="#">Alway keep menu open</a>
+          <a href="#">See close board</a>
+        </div>
+      </i>
+    </i>
+    <span class="input-group stylish-input-group pull-left col-md-2 col-sm-4">
+      <input type="text" class="form-control search-input">
+      <span class="input-group-addon">
+        <button type="submit">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </span>
+    </span>
+    <div>
+      <i class="dropdown">
+        <button class="btn btn-sm btn-project btn-notify pull-right data-toggle show-profile" data-toggle="dropdown">
+          <img src="assets/images/avatar.jpg" class="img-avatar">
+        </button>
+        <i class="dropdown-menu popup-menu-right">
+          <div>
+            <div class="title-popup">Create</div>
+            <div class="content-popup">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </i>
+      </i>
+
+      <i class="dropdown">
+        <button class="btn btn-sm btn-project btn-notify pull-right data-toggle" data-toggle="dropdown">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+        <i class="dropdown-menu popup-menu-right">
+          <div>
+            <div class="title-popup">Create
+              <i class="pull-right close-popup">x</i>
+            </div>
+            <div class="content-popup">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </i>
+      </i>
+
+      <i class="dropdown">
+        <button class="btn btn-sm btn-project btn-notify pull-right data-toggle" data-toggle="dropdown">
+          <i class="fa fa-question-circle" aria-hidden="true"></i>
+        </button>
+        <i class="dropdown-menu popup-menu-right">
+          <div>
+            <div class="title-popup">Information
+              <i class="pull-right close-popup">x</i>
+            </div>
+            <div class="content-popup">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </i>
+      </i>
+
+      <i class="dropdown">
+        <button class="btn btn-sm btn-project btn-notify pull-right data-toggle" data-toggle="dropdown">
+          <i class="fa fa-bell-o" aria-hidden="true"></i>
+        </button>
+        <i class="dropdown-menu popup-menu-right">
+          <div>
+            <div class="title-popup">Notification
+              <i class="pull-right close-popup">x</i>
+            </div>
+            <div class="content-popup">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </i>
+      </i>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="content">
+      <div class="test" style="background-color: #e2e4e6; margin-top: 16px; height: 162px ">
+        <div class="row justify-content-md-center">
+          <div class="col-md-5 profile-infor">
+            <div class="col-md-12">
+              <img src="assets/images/avatar.jpg" alt="" class="avatar-profile">
+              <div class="col-md-9 pull-right">
+                <table class="user-infor">
+                  <tr>
+                    <th>Tran Duc Thang-@tranducthang</th>
+                  </tr>
+                    <tr>
+                      <td><button class="btn btn-secondary edit-profile">
+                      <i class="fa fa-pencil" aria-hidden="true"></i>
+                      Edit profile</button></td>
+                    </tr>
+                </table>
+                <div class="show-edit-profile" style="display: none;">
+                  <b>Full Name:</b>
+                  <div class="form-group row input-profile">
+                    <div class="col-10">
+                      <input class="form-control" type="text">
+                    </div>
+                  </div>
+
+                  <b>User Name:</b>
+                  <div class="form-group row input-profile">
+                    <div class="col-10">
+                      <input class="form-control" type="text">
+                    </div>
+                  </div>
+
+                  <b>Initials:</b>
+                  <div class="form-group row input-profile">
+                    <div class="col-10">
+                      <input class="form-control" type="text">
+                    </div>
+                  </div>
+
+                  <b>Bio:</b>
+                  <div class="form-group row input-profile">
+                    <div class="col-12">
+                      <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-success">Save</button>
+                  <button type="submit" class="btn btn-secondary cancel-profile">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('body').on('click', '.edit-profile', function() {
+        $('.test').css('height', '400px');
+        $('.show-edit-profile').css('display', 'block');
+        $('.user-infor').css('display', 'none');
+      });
+
+      $('body').on('click', '.cancel-profile', function(){
+        $('.show-edit-profile').css('display', 'none');
+        $('.user-infor').css('display', 'block');
+        $('.test').css('height', '162px');
+      })
+    });
+  </script>
+</body>
+</html>
